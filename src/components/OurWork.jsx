@@ -1,13 +1,14 @@
 import React from "react";
 
 const OurWork = () => {
-  return (
-    <div className="max-w-8xl mx-auto mt-20">
-      <div className="flex justify-between gap-20">
+  const getBlocks = () => {
+    return (
+      <>
         <div className="w-6/12">
           <video
-            autoplay
-            muted="true"
+            autoplay="true"
+            playsInline
+            muted
             loop
             className="rounded-lg w-full h-[500px] object-cover"
           >
@@ -22,6 +23,7 @@ const OurWork = () => {
               Refreshing Gary Neville's digital presence
             </h2>
           </div>
+
           <div className="w-full">
             <img
               src="https://made-byshape.transforms.svdcdn.com/production/uploads/images/workImages/Nth-Degree/Camera_6_Sun_loungers_Dining_set_Final_300dpi.jpg?w=400&amp;h=300&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.2303&amp;fp-y=0.6967&amp;dm=1754560483&amp;s=56e523baec3e79733347aae4d3e04747"
@@ -31,7 +33,7 @@ const OurWork = () => {
             <div className="py-10">
               <span className="text-xl">2024 &bull; Nth Degree</span>
               <h2 className="text-2xl font-semibold">
-                A workplace consultancy creating inspiring environments
+                Redefining a leading global talent group
               </h2>
             </div>
           </div>
@@ -54,12 +56,20 @@ const OurWork = () => {
               Furniture designed to the greatest extent
             </h2>
           </div>
+
           <div className="w-full">
-            <img
-              src="https://made-byshape.transforms.svdcdn.com/production/uploads/images/workImages/Nth-Degree/Camera_6_Sun_loungers_Dining_set_Final_300dpi.jpg?w=400&amp;h=300&amp;q=80&amp;fm=webp&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=0.2303&amp;fp-y=0.6967&amp;dm=1754560483&amp;s=56e523baec3e79733347aae4d3e04747"
-              className=" w-full   relative z-10 rounded-lg mt-10"
-              loading="lazy"
-            />
+            <video
+              autoplay="true"
+              playsInline
+              muted
+              loop
+              className="rounded-lg w-full h-[500px] object-cover"
+            >
+              <source
+                src="https://servd-made-byshape.b-cdn.net/production/uploads/videos/ymu-thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
             <div className="py-10">
               <span className="text-xl">2024 &bull; Nth Degree</span>
               <h2 className="text-2xl font-semibold">
@@ -68,7 +78,13 @@ const OurWork = () => {
             </div>
           </div>
         </div>
-      </div>
+      </>
+    );
+  };
+
+  return (
+    <div className="max-w-8xl mx-auto mt-20">
+      <div className="flex justify-between gap-20">{getBlocks()}</div>
     </div>
   );
 };

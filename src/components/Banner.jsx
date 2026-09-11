@@ -3,12 +3,14 @@ import React from "react";
 const Banner = () => {
   return (
     <div className="px-4 h-[80vh]">
-      <div className="max-w-7xl mx-auto mt-50 bg-gray-300 p-10 rounded-md h-full relative">
+      <div className="max-w-7xl mx-auto mt-50  p-10 rounded-md h-full relative">
         <video
-          muted
-          autoplay
+          autoplay="true"
+          controls
           loop
-          className="absolute top-0 left-0 w-full object-fill h-full rounded-md z-10"
+          muted
+          playsinline
+          className="absolute top-0 left-0 w-full object-cover h-full rounded-md z-10"
         >
           <source
             src="https://servd-made-byshape.b-cdn.net/production/uploads/videos/shape-showreel-2024_looping-v3.mp4"
@@ -21,7 +23,7 @@ const Banner = () => {
               Hiya, we’re Shape{" "}
             </span>
             👋
-            <p className="text-8xl bg-white rounded-md  px-4 inline">
+            <p className="text-8xl bg-white rounded-md  px-4 inline inde-48">
               A web design and branding agency in Manchester
             </p>
           </h2>
